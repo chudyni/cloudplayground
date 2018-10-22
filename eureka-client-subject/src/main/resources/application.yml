@@ -1,0 +1,12 @@
+#Eureka Server location is taken from Spring Cloud Config Server - url in bootstrap.yml
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: "http://localhost:8010/eureka/""
+
+#Moved to github fof Config Server
+#words: "I,You,He,She,It"
+
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+

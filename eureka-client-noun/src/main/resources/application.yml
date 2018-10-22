@@ -1,0 +1,17 @@
+#Eureka Server location is taken from Spring Cloud Config Server
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: "http://localhost:8010/eureka/""
+
+#Moved to github fof Config Server
+#words: "boat,book,vote,seat,backpack,partition,groundhog"
+
+#Ribbon presentation
+#also added profiles - normal, cold
+#-Dspring.profiles.active=normal
+#-Dspring.profiles.active=cold
+
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+

@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+#          uri:  "https://github.com/chudyni/spring-cloud-config-data"
+          uri:  "https://github.com/chudyni/spring-cloud-eureka-config-data"
+          username: chudyni
+          password: pantera5
+#  rabbitmq:
+#    host: 46.101.118.59
+#    port: 5672
+#    username: guest
+#    password: guest
+# RabbitMQ and Spring Cloud Config Server on remote machine as Docker containers
+server:
+  port: 8001
+#  port: 8009
+
+management:
+  security:
+    enabled: false

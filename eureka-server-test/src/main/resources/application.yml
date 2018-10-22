@@ -1,0 +1,26 @@
+spring:
+  profiles: primary
+server:
+  port: 8010
+
+---
+spring:
+  profiles: secondary
+server:
+  port: 8011
+
+---
+spring:
+  profiles: tertiary
+server:
+  port: 8012
+
+
+#Run the application 3 times, using -Dspring.profiles.active=primary (and secondary, and tertiary) to activate the relevant profile.
+
+#etc/hosts
+# START section for Microservices with Spring Course
+#127.0.0.1       eureka-primary
+#127.0.0.1       eureka-secondary
+#127.0.0.1       eureka-tertiary
+# END section for Microservices with Spring Course

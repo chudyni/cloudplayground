@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: "eureka-client-subject"
+  cloud:
+    config:
+      uri: "http://localhost:8001"
