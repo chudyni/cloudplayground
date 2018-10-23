@@ -5,5 +5,7 @@ spring:
     config:
       uri: "http://localhost:8001"
 zuul:
-  path: "/services"
-  strip-prefix: true
+  routes:
+    sillysentence:
+      path: "/sentence"
+      serviceId: "eureka-client-sentences"
