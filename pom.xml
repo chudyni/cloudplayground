@@ -42,7 +42,7 @@
         <module>eureka-client-verb</module>
         <module>eureka-client-subject</module>
         <module>eureka-client-sentences</module>
-        <!--<module>eureka-client-zuul-gateway</module>-->
+        <module>eureka-client-zuul-gateway</module>
     </modules>
 
     <build>
