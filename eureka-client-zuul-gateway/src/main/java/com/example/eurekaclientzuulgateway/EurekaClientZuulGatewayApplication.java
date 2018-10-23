@@ -1,4 +1,4 @@
-package demo;
+package com.example.eurekaclientzuulgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +9,10 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 
 @SpringBootApplication
 @EnableZuulProxy
-public class Application {
+public class EurekaClientZuulGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(EurekaClientZuulGatewayApplication.class, args);
     }
 
     @Bean
