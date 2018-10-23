@@ -12,16 +12,15 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.home.spring.cloud</groupId>
+		<artifactId>cloudplayground-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<spring.cloud.netflix.version>2.0.1.RELEASE</spring.cloud.netflix.version>
+		<jaxb.version>2.3.1</jaxb.version>
 	</properties>
 
 	<dependencyManagement>
@@ -29,7 +28,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-netflix</artifactId>
-				<version>2.0.1.RELEASE</version>
+				<version>${spring.cloud.netflix.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -56,19 +55,8 @@
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
-			<version>2.3.0</version>
+			<version>${jaxb.version}</version>
 		</dependency>
 	</dependencies>
-
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
 
 </project>

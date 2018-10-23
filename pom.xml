@@ -5,8 +5,55 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.home.spring.cloud</groupId>
-    <artifactId>cloudplayground</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>cloudplayground-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>config-server-test</module>
+        <module>eureka-server-test</module>
+        <module>eureka-client-noun</module>
+        <module>eureka-client-verb</module>
+        <module>eureka-client-subject</module>
+        <module>eureka-client-sentences</module>
+        <!--<module>eureka-client-zuul-gateway</module>-->
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 
 
 </project>
